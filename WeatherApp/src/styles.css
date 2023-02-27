@@ -1,0 +1,93 @@
+form {
+  position: relative;
+  top: 0px;
+  left: 0;
+}
+
+form input {
+  border-radius: 35px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+body {
+  background-color: #3a7d9f;
+}
+
+#current-location {
+  border-radius: 20px;
+  background-color: #005986;
+  color: white;
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.big-temp {
+  font-size: 60px;
+}
+
+.units {
+  font-size: 13px;
+  position: relative;
+  bottom: 30px;
+}
+
+.container {
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #f3f2ef;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.search-button {
+  color: white;
+  background-color: #005986;
+  width: 18%;
+}
+
+.search-bar {
+  width: 80%;
+  text-align: center;
+}
+
+.bi-droplet-fill {
+  color: #6eb9ff;
+}
+
+.bi-wind {
+  color: #6eb9ff;
+}
+
+.bi-cloud-sleet-fill {
+  color: #3a7d9f;
+}
+
+.bi-brightness-high-fill {
+  color: #f6d36b;
+}
+
+.bi-cloud-sun-fill {
+  color: #55a6bf;
+}
+
+.bi-cloud-drizzle-fill {
+  color: #3a7d9f;
+}
+
+.first,
+.second,
+.third {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.second {
+  margin-left: 100px;
+  margin-right: 20px;
+}
