@@ -23,6 +23,10 @@ body {
   padding-right: 20px;
 }
 
+.source-code {
+  text-align: center;
+}
+
 .big-temp {
   font-size: 60px;
 }
