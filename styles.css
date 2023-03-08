@@ -23,6 +23,13 @@ body {
   padding-right: 20px;
 }
 
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-dec
 .source-code {
   text-align: center;
 }
