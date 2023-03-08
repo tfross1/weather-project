@@ -35,9 +35,10 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-
   let bigTemp = document.querySelector("#big-temp");
+  let iconElement = document.querySelector("#icon");
+  celsiusTemp = response.data.main.temp;
+  let temperature = Math.round(celsiusTemp);
   bigTemp.innerHTML = temperature;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
@@ -47,6 +48,10 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 //display current location temp
