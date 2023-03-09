@@ -23,6 +23,10 @@ body {
   padding-right: 20px;
 }
 
+#source-code-link {
+  color: white;
+}
+
 .active {
   color: black;
   cursor: default;
