@@ -29,7 +29,9 @@ body {
 }
 
 .active:hover {
-  text-dec
+  text-decoration: none;
+}
+
 .source-code {
   text-align: center;
 }
