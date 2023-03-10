@@ -1,11 +1,31 @@
 // clock
 
-let now = new Date();
-let timeNow = document.querySelector("#current-time");
-let hour = now.getHours();
-let minutes = String(now.getMinutes()).padStart(2, "0");
+let currentTime = new Date();
 
-timeNow.innerHTML = `${hour}:${minutes}`;
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[date.getDay()];
+  let currentHour = date.getHours();
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+  let currentMinute = date.getMinutes();
+  if (currentMinute < 10) {
+    currentMinute = `0${currentMinute}`;
+  }
+
+  let displayDate = `${currentDay} | ${currentHour}:${currentMinute}`;
+
+  return displayDate;
+}
 
 // search engine
 
