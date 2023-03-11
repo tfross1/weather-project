@@ -23,21 +23,12 @@ body {
   padding-right: 20px;
 }
 
-.container {
-  border: 3px solid black;
-  border-radius: 20px;
-  margin: 30px auto;
-  padding: 15px;
-  background-color: #f3f2ef;
+#current-date {
+  color: #005986;
 }
 
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
+#source-code-link {
+  color: white;
 }
 
 .source-code {
@@ -52,6 +43,14 @@ body {
   font-size: 13px;
   position: relative;
   bottom: 30px;
+}
+
+.container {
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #f3f2ef;
 }
 
 .forecast {
@@ -69,38 +68,19 @@ body {
   text-align: center;
 }
 
-.bi-droplet-fill {
-  color: #6eb9ff;
-}
-
-.bi-wind {
-  color: #6eb9ff;
-}
-
-.bi-cloud-sleet-fill {
-  color: #3a7d9f;
-}
-
-.bi-brightness-high-fill {
-  color: #f6d36b;
-}
-
-.bi-cloud-sun-fill {
-  color: #55a6bf;
-}
-
-.bi-cloud-drizzle-fill {
-  color: #3a7d9f;
-}
-
-.first,
-.second,
-.third {
-  padding-top: 20px;
+.first {
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .second {
   margin-left: 100px;
   margin-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.third {
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
