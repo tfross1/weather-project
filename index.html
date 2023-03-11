@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Report</title>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -16,7 +17,6 @@
       src="https://kit.fontawesome.com/fd6293e17b.js"
       crossorigin="anonymous"
     ></script>
-    <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -40,19 +40,12 @@
             <img id="icon" src="http://openweathermap.org/img/wn/13n@2x.png" />
             <span id="city-listed">New York City</span>
           </h1>
-          <p>
-            Thursday <span id="current-time">14:20</span> |
-            <span id="description">Partly Cloudy</span>
-          </p>
+          <p>Last Updated: <span id="current-date">Thursday 14:20</span></p>
           <button id="current-location">current location</button>
         </div>
         <div class="second col-2">
           <p class="big-temp">
-            <span id="big-temp">36</span
-            ><span class="units">
-              <a href="#" id="celsius-link" class="active">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
+            <span id="big-temp">36</span><span class="units">°F</span>
           </p>
         </div>
         <div class="third col-3">
@@ -64,19 +57,16 @@
             <i class="fa-solid fa-wind"></i>
             Wind <span id="wind">WNW 18 MPH</span>
           </p>
-          <p>
-            <i class="fa-solid fa-temperature-half"></i>
-            <span id="max-temp">36°</span>/<span id="min-temp">16°</span>
-          </p>
+          <span id="description">Partly Cloudy</span>
         </div>
       </div>
       <div class="forecast" id="forecast"></div>
     </div>
     <p class="source-code">
-      <a href="https://github.com/tfross1/weather-project" id="source-code-link">Open source-code</a>
+      <a href="https://github.com/tfross1/weather-project">Open source-code</a>
       by Theresa Fross
     </p>
-    <script src="./script.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
 
