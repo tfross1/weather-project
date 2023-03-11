@@ -102,7 +102,6 @@ function search(event) {
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", search);
-form.addEventListener("submit", searchCity);
 
 // display current temp of city
 
@@ -129,7 +128,7 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  getForecast(response.data.coordinates);
+  getForecast(response.data.coord);
 }
 
 //display current location temp
@@ -172,4 +171,4 @@ function getPosition(event) {
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getPosition);
 
-
+searchCity("New York");
