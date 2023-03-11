@@ -133,7 +133,6 @@ function search(event) {
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", search);
-//form.addEventListener("submit", searchCity);
 
 //display current location temp
 
@@ -174,3 +173,4 @@ let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getPosition);
 
 searchCity("New York");
+
