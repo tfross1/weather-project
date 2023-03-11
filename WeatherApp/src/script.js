@@ -173,4 +173,3 @@ let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getPosition);
 
 searchCity("New York");
-
