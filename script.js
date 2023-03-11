@@ -1,11 +1,34 @@
 // clock and day
 
-let now = new Date();
-let timeNow = document.querySelector("#current-time");
-let hour = now.getHours();
-let minutes = String(now.getMinutes()).padStart(2, "0");
+let currentTime = new Date();
 
-timeNow.innerHTML = `${hour}:${minutes}`;
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[date.getDay()];
+  let currentHour = date.getHours();
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+  let currentMinute = date.getMinutes();
+  if (currentMinute < 10) {
+    currentMinute = `0${currentMinute}`;
+  }
+
+  let displayDate = `${currentDay} | ${currentHour}:${currentMinute}`;
+
+  return displayDate;
+}
+
+let currentDate = document.querySelector("#current-date");
+currentDate.innerHTML = formatDate(currentTime);
 
 // display forecast for the week
 
@@ -44,7 +67,6 @@ function showForecast(response) {
   });
 
   forecastHTML = forecastHTML + `</div>`;
-  console.log({forecastHTML})
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -107,14 +129,12 @@ function cityTemperature(response) {
   currentgeoTemp.innerHTML = temperature;
   let currentGeoLocation = document.querySelector("#city-listed");
   currentGeoLocation.innerHTML = response.data.name;
-  document.querySelector("#humidity").innerHTML = Math.round(
-    response.data.main.humidity
-  );
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].main;
 }
 
 // get current location city name and temp
